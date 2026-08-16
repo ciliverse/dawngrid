@@ -15,6 +15,135 @@ Identity, shell, gateway, and audit live in this repo. Domain products stay in t
 - Paste a URL and it becomes a cell; if the site refuses a frame, open it in a new tab
 - Dawn, Ion, and Tide palettes, each with light and dark
 
+## Screenshots
+
+<details>
+<summary>Shell</summary>
+
+<details>
+<summary>Sign in</summary>
+
+<img src="docs/screenshots/01-login.png" alt="Sign in" width="920" />
+
+</details>
+
+<details>
+<summary>Cell grid</summary>
+
+<img src="docs/screenshots/02-grid.png" alt="Cell grid" width="920" />
+
+</details>
+
+<details>
+<summary>Cell grid, dark</summary>
+
+<img src="docs/screenshots/16-grid-dark.png" alt="Cell grid in dark mode" width="920" />
+
+</details>
+
+<details>
+<summary>Layout</summary>
+
+<img src="docs/screenshots/13-settings.png" alt="Layout and theme" width="920" />
+
+</details>
+
+</details>
+
+<details>
+<summary>Plugins</summary>
+
+<details>
+<summary>Hello</summary>
+
+<img src="docs/screenshots/03-hello.png" alt="Hello native plugin" width="920" />
+
+</details>
+
+<details>
+<summary>Images</summary>
+
+<img src="docs/screenshots/04-images.png" alt="Images demo" width="920" />
+
+</details>
+
+<details>
+<summary>Train</summary>
+
+<img src="docs/screenshots/05-train.png" alt="Train demo" width="920" />
+
+</details>
+
+<details>
+<summary>Robot</summary>
+
+<img src="docs/screenshots/06-robot.png" alt="Robot demo" width="920" />
+
+</details>
+
+<details>
+<summary>Cluster adapter</summary>
+
+<img src="docs/screenshots/15-cluster.png" alt="Cluster adapter loading CiliKube" width="920" />
+
+</details>
+
+</details>
+
+<details>
+<summary>Host admin</summary>
+
+<details>
+<summary>Plugins</summary>
+
+<img src="docs/screenshots/07-plugins.png" alt="Plugins admin" width="920" />
+
+</details>
+
+<details>
+<summary>People</summary>
+
+<img src="docs/screenshots/08-users.png" alt="People" width="920" />
+
+</details>
+
+<details>
+<summary>Roles</summary>
+
+<img src="docs/screenshots/09-roles.png" alt="Roles" width="920" />
+
+</details>
+
+<details>
+<summary>Orgs</summary>
+
+<img src="docs/screenshots/10-orgs.png" alt="Orgs" width="920" />
+
+</details>
+
+<details>
+<summary>Audit</summary>
+
+<img src="docs/screenshots/11-audit.png" alt="Audit" width="920" />
+
+</details>
+
+<details>
+<summary>Cells</summary>
+
+<img src="docs/screenshots/12-cells.png" alt="Cells" width="920" />
+
+</details>
+
+<details>
+<summary>Account</summary>
+
+<img src="docs/screenshots/14-account.png" alt="Account" width="920" />
+
+</details>
+
+</details>
+
 ## Run locally
 
 Needs [pnpm](https://pnpm.io) 10.
