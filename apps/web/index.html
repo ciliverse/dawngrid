@@ -1,0 +1,23 @@
+<!doctype html>
+    <html lang="zh-CN">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dawngrid</title>
+        <script>
+          (function () {
+            var mode = localStorage.getItem("dawngrid.theme");
+            var palette = localStorage.getItem("dawngrid.palette");
+            document.documentElement.classList.toggle("dark", mode === "dark");
+            if (palette === "ink") palette = "ion";
+            document.documentElement.dataset.palette =
+              palette === "ion" || palette === "tide" ? palette : "dawn";
+            document.documentElement.style.colorScheme = mode === "dark" ? "dark" : "light";
+          })();
+        </script>
+      </head>
+      <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.tsx"></script>
+      </body>
+    </html>

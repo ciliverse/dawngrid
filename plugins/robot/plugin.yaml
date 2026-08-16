@@ -1,0 +1,22 @@
+id: robot
+kind: native
+name: Robot
+version: 0.1.0
+nav:
+  - id: robot.fleet
+    label: Robot
+    path: /robot
+    permission: robot.read
+    icon: bot
+routes:
+  basePath: /robot
+  frontend:
+    package: "@dawngrid/robot-plugin"
+    export: register
+api:
+  prefix: /api/robot
+  stripPrefix: true
+  upstreamPathPrefix: ""
+permissions:
+  - robot.read
+  - robot.write

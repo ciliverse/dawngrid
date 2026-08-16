@@ -1,0 +1,11 @@
+{
+  "name": "dawngrid",
+  "private": true,
+  "description": "Host shell: one login, a cell grid, a plugin gateway.",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @dawngrid/api --filter @dawngrid/hello-plugin --filter @dawngrid/web dev",
+    "test": "pnpm --filter @dawngrid/api test && pnpm --filter @dawngrid/web test",
+    "typecheck": "pnpm --filter @dawngrid/api typecheck && pnpm --filter @dawngrid/web typecheck && pnpm --filter @dawngrid/plugin-sdk typecheck"
+  }
+}

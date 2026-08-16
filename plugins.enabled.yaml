@@ -1,0 +1,17 @@
+plugins:
+  - id: hello
+    source: ./plugins/hello
+    version: 0.1.0
+  - id: cluster
+    source: ./plugins/cluster
+    version: 0.1.0
+    home: true
+  - id: images
+    source: ./plugins/images
+    version: 0.1.0
+  - id: train
+    source: ./plugins/train
+    version: 0.1.0
+  - id: robot
+    source: ./plugins/robot
+    version: 0.1.0

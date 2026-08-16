@@ -1,0 +1,22 @@
+id: hello
+kind: native
+name: Hello
+version: 0.1.0
+nav:
+  - id: hello.echo
+    label: Hello
+    path: /hello
+    permission: hello.read
+    icon: spark
+routes:
+  basePath: /hello
+  frontend:
+    package: "@dawngrid/hello-plugin"
+    export: register
+api:
+  prefix: /api/hello
+  stripPrefix: true
+  upstreamPathPrefix: ""
+permissions:
+  - hello.read
+  - hello.write

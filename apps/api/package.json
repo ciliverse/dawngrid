@@ -1,0 +1,27 @@
+{
+  "name": "@dawngrid/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "DAWNGRID_PLUGIN_HELLO_UPSTREAM=http://127.0.0.1:8791 DAWNGRID_PLUGIN_CLUSTER_UPSTREAM=http://127.0.0.1:8080 DAWNGRID_PLUGIN_IMAGES_UPSTREAM=http://127.0.0.1:8792 DAWNGRID_PLUGIN_TRAIN_UPSTREAM=http://127.0.0.1:8793 DAWNGRID_PLUGIN_ROBOT_UPSTREAM=http://127.0.0.1:8794 DAWNGRID_GATEWAY_SECRET=dev-secret DAWNGRID_JWT_ISS=http://127.0.0.1:8788/ tsx watch src/index.ts",
+    "start": "DAWNGRID_PLUGIN_HELLO_UPSTREAM=http://127.0.0.1:8791 DAWNGRID_PLUGIN_CLUSTER_UPSTREAM=http://127.0.0.1:8080 DAWNGRID_PLUGIN_IMAGES_UPSTREAM=http://127.0.0.1:8792 DAWNGRID_PLUGIN_TRAIN_UPSTREAM=http://127.0.0.1:8793 DAWNGRID_PLUGIN_ROBOT_UPSTREAM=http://127.0.0.1:8794 DAWNGRID_GATEWAY_SECRET=dev-secret DAWNGRID_JWT_ISS=http://127.0.0.1:8788/ tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.9",
+    "hono": "^4.11.7",
+    "@libsql/client": "^0.15.15",
+    "drizzle-orm": "^0.44.7",
+    "jose": "^6.1.3",
+    "yaml": "^2.8.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "tsx": "^4.21.0",
+    "typescript": "~7.0.2",
+    "vitest": "^3.2.4"
+  }
+}

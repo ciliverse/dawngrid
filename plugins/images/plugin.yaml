@@ -1,0 +1,22 @@
+id: images
+kind: native
+name: Images
+version: 0.1.0
+nav:
+  - id: images.catalog
+    label: Images
+    path: /images
+    permission: images.read
+    icon: layers
+routes:
+  basePath: /images
+  frontend:
+    package: "@dawngrid/images-plugin"
+    export: register
+api:
+  prefix: /api/images
+  stripPrefix: true
+  upstreamPathPrefix: ""
+permissions:
+  - images.read
+  - images.write

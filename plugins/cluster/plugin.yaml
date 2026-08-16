@@ -1,0 +1,25 @@
+id: cluster
+kind: adapter
+name: Cluster
+version: 0.1.0
+nav:
+  - id: cluster.console
+    label: Cluster
+    path: /cluster
+    permission: cluster.read
+    icon: grid
+routes:
+  basePath: /cluster
+  frontend:
+    package: "@dawngrid/cluster-plugin"
+    export: register
+api:
+  prefix: /api/cluster
+  stripPrefix: true
+  upstreamPathPrefix: /api
+embed:
+  mode: iframe
+  origin: http://127.0.0.1:8888
+permissions:
+  - cluster.read
+  - cluster.write

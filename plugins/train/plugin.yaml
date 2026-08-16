@@ -1,0 +1,22 @@
+id: train
+kind: native
+name: Train
+version: 0.1.0
+nav:
+  - id: train.runs
+    label: Train
+    path: /train
+    permission: train.read
+    icon: pulse
+routes:
+  basePath: /train
+  frontend:
+    package: "@dawngrid/train-plugin"
+    export: register
+api:
+  prefix: /api/train
+  stripPrefix: true
+  upstreamPathPrefix: ""
+permissions:
+  - train.read
+  - train.write

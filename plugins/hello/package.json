@@ -1,0 +1,27 @@
+{
+  "name": "@dawngrid/hello-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./ui/src/register.tsx"
+  },
+  "scripts": {
+    "dev": "DAWNGRID_GATEWAY_SECRET=dev-secret DAWNGRID_JWT_ISS=http://127.0.0.1:8788/ tsx watch server/src/index.ts"
+  },
+  "dependencies": {
+    "@dawngrid/plugin-sdk": "workspace:*",
+    "@hono/node-server": "^1.19.9",
+    "hono": "^4.11.7",
+    "jose": "^6.1.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "react": "^19.2.8",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}
