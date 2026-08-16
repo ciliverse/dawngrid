@@ -1,21 +1,23 @@
 # Dawngrid
 
-一次登录，一张格子。集群、训练、机器人、已经在跑的前端，都以插件挂上来。
+[中文](./README.zh-CN.md)
 
-身份、壳、网关、审计在这个仓库。领域产品待在自己的仓里，不要把 Pod 或训练 Run 写进宿主。
+One login, one grid. Cluster, training, robots, and any UI already running hang on as plugins.
 
-## 做什么
+Identity, shell, gateway, and audit live in this repo. Domain products stay in their own. Do not put Pods or training runs in the host.
 
-- 登录后先看到空间格，浮岛导航，七种地板
-- 人、角色、组织 / 项目、审计
-- 编译期插件：native 页面，或 iframe 包一层别人的控制台
-- 运行时装卸，不必重建
-- 粘贴 URL 立刻成格；对方拒嵌套就新标签打开
-- Dawn / Ion / Tide 三套主题，亮暗各一套
+## What it does
 
-## 本地跑
+- After login you land on the cell grid, with an island chrome and seven floors
+- People, roles, orgs / projects, and audit
+- Compile-time plugins: a native page, or a thin iframe around someone else's console
+- Enable or disable a plugin at runtime without a rebuild
+- Paste a URL and it becomes a cell; if the site refuses a frame, open it in a new tab
+- Dawn, Ion, and Tide palettes, each with light and dark
 
-需要 [pnpm](https://pnpm.io) 10。
+## Run locally
+
+Needs [pnpm](https://pnpm.io) 10.
 
 ```bash
 pnpm install
@@ -23,31 +25,31 @@ pnpm test
 pnpm dev
 ```
 
-打开 [http://127.0.0.1:5178](http://127.0.0.1:5178)。开发账号 `admin` / `admin123`。
+Open [http://127.0.0.1:5178](http://127.0.0.1:5178). Dev account `admin` / `admin123`.
 
-| 进程 | 端口 |
-|------|------|
-| 壳 | 5178 |
-| 宿主 API | 8788 |
-| Hello 插件 | 8791 |
+| Process | Port |
+|---------|------|
+| Shell | 5178 |
+| Host API | 8788 |
+| Hello plugin | 8791 |
 
-Cluster 的 iframe 要另起 CiliKube（默认 Web `8888`、API `8080`）。Images / Train / Robot 是假数据格，不占真实服务。
+Cluster's iframe needs a separate CiliKube (Web `8888`, API `8080` by default). Images / Train / Robot are fake-data cells and do not need real services.
 
-卸一格：地板 Remove，或 Plugins 页。要从这台构建里拿掉，才改 `plugins.enabled.yaml` 并重建。
+To drop a cell: Remove on the floor, or the Plugins page. To take it out of this build, edit `plugins.enabled.yaml` and rebuild.
 
-单独起 API 时需要：`DAWNGRID_PLUGIN_<ID>_UPSTREAM`、`DAWNGRID_GATEWAY_SECRET`、`DAWNGRID_JWT_ISS`。`pnpm dev` 已带开发默认值。
+If you start the API alone, set `DAWNGRID_PLUGIN_<ID>_UPSTREAM`, `DAWNGRID_GATEWAY_SECRET`, and `DAWNGRID_JWT_ISS`. `pnpm dev` already ships those defaults.
 
-## 仓库
+## Layout
 
 ```
-apps/api              宿主 API（Hono + SQLite）
-apps/web              壳（Vite + React）
-packages/plugin-sdk   插件契约
-plugins/hello         native 示例
+apps/api              Host API (Hono + SQLite)
+apps/web              Shell (Vite + React)
+packages/plugin-sdk   Plugin contract
+plugins/hello         Native example
 plugins/cluster       CiliKube adapter
-plugins/images        镜像 demo
-plugins/train         训练 demo
-plugins/robot         机器人 demo
+plugins/images        Images demo
+plugins/train         Train demo
+plugins/robot         Robot demo
 ```
 
-新插件：`plugin.yaml` + `register()`，写进清单和 `apps/web/src/plugins/catalog.ts`。
+A new plugin needs `plugin.yaml` + `register()`, then an entry in the enabled list and `apps/web/src/plugins/catalog.ts`.
