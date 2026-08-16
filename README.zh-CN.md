@@ -182,3 +182,7 @@ plugins/robot         机器人 demo
 ```
 
 新插件：`plugin.yaml` + `register()`，写进清单和 `apps/web/src/plugins/catalog.ts`
+
+## 许可证
+
+[GNU Affero General Public License v3.0](./LICENSE)（`AGPL-3.0-only`）

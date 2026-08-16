@@ -182,3 +182,7 @@ plugins/robot         Robot demo
 ```
 
 A new plugin needs `plugin.yaml` + `register()`, then an entry in the enabled list and `apps/web/src/plugins/catalog.ts`.
+
+## License
+
+[GNU Affero General Public License v3.0](./LICENSE) (`AGPL-3.0-only`)
